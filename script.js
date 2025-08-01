@@ -10,10 +10,79 @@ function scrollToSection(sectionId) {
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
     
     if (navToggle && navMenu) {
+        // Toggle mobile menu
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+            
+            // Change hamburger icon to X when active
+            const icon = navToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                
+                // Reset hamburger icon
+                const icon = navToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navToggle.contains(event.target) || navMenu.contains(event.target);
+            
+            if (!isClickInsideNav && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                
+                // Reset hamburger icon
+                const icon = navToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Handle touch events for mobile
+        document.addEventListener('touchstart', function(event) {
+            const isClickInsideNav = navToggle.contains(event.target) || navMenu.contains(event.target);
+            
+            if (!isClickInsideNav && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                
+                // Reset hamburger icon
+                const icon = navToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close mobile menu on window resize if larger than mobile breakpoint
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                
+                // Reset hamburger icon
+                const icon = navToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         });
     }
     
@@ -311,30 +380,6 @@ style.textContent = `
     
     .notification-close:hover {
         background: rgba(255, 255, 255, 0.2);
-    }
-    
-    @media (max-width: 768px) {
-        .nav-menu.active {
-            display: flex;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: white;
-            flex-direction: column;
-            padding: 1rem 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-        
-        .nav-menu.active a {
-            padding: 0.75rem 1.5rem;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        
-        .nav-menu.active a:last-child {
-            border-bottom: none;
-        }
     }
 `;
 document.head.appendChild(style);

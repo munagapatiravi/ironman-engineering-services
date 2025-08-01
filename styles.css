@@ -61,6 +61,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    position: relative;
 }
 
 .nav-logo h3 {
@@ -106,6 +107,14 @@ body {
     color: var(--primary-color);
     font-size: 1.5rem;
     cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.nav-toggle:hover {
+    background: rgba(30, 58, 138, 0.1);
 }
 
 /* Hero Section */
@@ -1589,14 +1598,81 @@ body {
     }
 }
 
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .nav-menu a {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #e5e7eb;
+        color: var(--dark-gray);
+        font-weight: 500;
+        transition: all 0.3s ease;
+        transform: translateX(-20px);
+        opacity: 0;
+        animation: slideInLeft 0.3s ease forwards;
+    }
+    
+    .nav-menu.active a:nth-child(1) { animation-delay: 0.1s; }
+    .nav-menu.active a:nth-child(2) { animation-delay: 0.2s; }
+    .nav-menu.active a:nth-child(3) { animation-delay: 0.3s; }
+    .nav-menu.active a:nth-child(4) { animation-delay: 0.4s; }
+    .nav-menu.active a:nth-child(5) { animation-delay: 0.5s; }
+    .nav-menu.active a:nth-child(6) { animation-delay: 0.6s; }
+    
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-menu a:hover {
+        background: var(--light-gray);
+        color: var(--primary-color);
+        transform: translateX(5px);
+    }
+    
+    .nav-menu a::after {
         display: none;
     }
     
     .nav-toggle {
         display: block;
+        z-index: 1001;
+    }
+    
+    .nav-toggle.active {
+        color: var(--accent-color);
     }
     
     .hero-title {
@@ -1658,6 +1734,19 @@ body {
 }
 
 @media (max-width: 480px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .nav-logo h3 {
+        font-size: 1.25rem;
+    }
+    
+    .nav-menu a {
+        padding: 0.875rem 1rem;
+        font-size: 0.95rem;
+    }
+    
     .hero-title {
         font-size: 2rem;
     }
@@ -1689,5 +1778,9 @@ body {
     
     .contact-form {
         padding: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 10px;
     }
 }
