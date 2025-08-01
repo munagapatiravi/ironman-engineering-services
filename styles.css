@@ -24,6 +24,7 @@ body {
 
 /* Color Scheme */
 :root {
+    --navbar-height: 70px; /* Define navbar height as a variable */
     --primary-color: #1e3a8a;
     --secondary-color: #64748b;
     --accent-color: #0ea5e9;
@@ -60,7 +61,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: var(--navbar-height);
     position: relative;
 }
 
@@ -125,6 +126,7 @@ body {
     align-items: center;
     background: var(--gradient-primary);
     overflow: hidden;
+    padding-top: var(--navbar-height); /* Account for fixed navbar */
 }
 
 .hero-background {
