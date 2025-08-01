@@ -1,0 +1,67 @@
+**Services and Categories Summary**
+
+---
+
+**1. Structural & Civil Engineering Services**
+
+* **Structural Steel Detailing**
+  Shop drawings, erection plans, 3D BIM models, clash detection, and constructability reviews using Tekla, SDS/2, Revit, AutoCAD.
+
+* **Connection Design & Delegated Design**
+  Welded, bolted, hybrid connections; PE-stamped delegated designs for stairs, ladders, platforms.
+
+* **Precast Detailing**
+  Reinforced precast component drawings including panels, beams, slabs, stairs; clash detection and installation planning.
+
+* **Miscellaneous Steel Detailing**
+  Detailing for railings, ladders, grating, bollards, and similar elements integrated with structural components.
+
+* **Structural Estimating Services**
+  Quantity take-offs, pricing, change order evaluation, value engineering. Supported by Tekla, Revit, Bluebeam.
+
+* **Pre-Engineered Buildings (PEB) Design**
+  Design and detailing support for PEB structures for contractors, architects, and steel fabricators.
+
+---
+
+**2. Mechanical & Manufacturing Engineering Services**
+
+* **Automotive Design Services**
+  BIW (Body-in-White) structure design, part/component development, chassis and CAD modeling.
+
+* **Press Tool & Sheet Metal Design**
+  Tooling design and sheet metal fixture drafting for manufacturing and automation processes.
+
+---
+
+**3. Telecom & Infrastructure Engineering**
+
+* **Telecom Tower Structure Design**
+  Engineering for lattice towers, monopoles, guyed masts, small cells. Includes wind/seismic load design and antenna layouts.
+
+---
+
+**Tools & Standards Used**
+
+* Software: Tekla Structures, SDS/2, AutoCAD, Revit, Navisworks, Bluebeam, STAAD Pro, IDEA StatiCa, SAP2000
+* Codes: AISC, CISC, BS, AS/NZS, Eurocodes, IS, ACI, AWS
+
+---
+
+**Summary Table**
+
+| Category                  | Services                                                 |
+| ------------------------- | -------------------------------------------------------- |
+| Structural Detailing      | BIM drawings, shop detailing, steel modeling             |
+| Connection Design         | PE-stamped delegated and connection design               |
+| Precast Detailing         | Reinforced component modeling, clash detection           |
+| Miscellaneous Steel       | Ladders, handrails, stairs, gates, bollards              |
+| Estimation & Take-offs    | Material quantity take-off, costing, value engineering   |
+| PEB Design                | Design & documentation for steel buildings               |
+| Automotive Design         | Vehicle frame design, part modeling, chassis engineering |
+| Press Tool/Sheet Metal    | Manufacturing tool design and CAD drafting               |
+| Telecom Tower Engineering | Structural telecom tower design and analysis             |
+
+---
+
+delivers end-to-end design, detailing, and engineering documentation services across the construction, manufacturing, and telecom sectors with deep expertise in both structural and mechanical disciplines.
