@@ -6,11 +6,35 @@ function scrollToSection(sectionId) {
     }
 }
 
+// Handle Home navigation to scroll to top
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 // Mobile navigation toggle
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    // Handle navigation link clicks
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // If it's the home link (#top), scroll to top
+            if (href === '#top') {
+                e.preventDefault();
+                scrollToTop();
+            }
+            // For other internal links, use smooth scrolling
+            else if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                scrollToSection(targetId);
+            }
+        });
+    });
     
     if (navToggle && navMenu) {
         // Toggle mobile menu
