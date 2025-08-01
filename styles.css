@@ -126,7 +126,7 @@ body {
     align-items: center;
     background: var(--gradient-primary);
     overflow: hidden;
-    padding-top: var(--navbar-height); /* Account for fixed navbar */
+    padding-top: 0; /* Remove extra padding */
 }
 
 .hero-background {
@@ -153,7 +153,7 @@ body {
     z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: var(--navbar-height) 20px 0 20px; /* Add top padding to hero content only */
     color: white;
 }
 
