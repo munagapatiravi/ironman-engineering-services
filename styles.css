@@ -163,10 +163,25 @@ h1, h2, h3, h4 {
     animation: pulse 2s ease-in-out infinite;
 }
 
-/* Loading state for animations */
+/* Loading state for animations - with fallback */
 body:not(.animations-loaded) .hero-feature-card {
     opacity: 0;
     transform: translateY(30px);
+    /* Fallback: show cards after 3 seconds if animations don't load */
+    animation: fallback-show 0.5s ease-out 3s forwards;
+}
+
+@keyframes fallback-show {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ensure cards are always visible as fallback */
+.hero-feature-card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 /* Smooth transitions for all interactive elements */
