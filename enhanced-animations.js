@@ -17,7 +17,15 @@ function initHeroAnimations() {
     const subText = heroContent.querySelector('.hero-sub');
     const featureCards = heroContent.querySelectorAll('.hero-feature-card');
     
-    // Set initial states
+    // Ensure cards are always visible (no initial hiding)
+    featureCards.forEach((card, index) => {
+        card.style.opacity = '1';
+        card.style.visibility = 'visible';
+        card.style.display = 'flex';
+        card.style.transform = 'translateY(0)';
+    });
+    
+    // Set initial states for other elements (but not cards)
     hero.style.opacity = '0';
     title.style.opacity = '0';
     title.style.transform = 'translateY(50px)';
@@ -25,11 +33,6 @@ function initHeroAnimations() {
     leadText.style.transform = 'translateY(30px)';
     subText.style.opacity = '0';
     subText.style.transform = 'translateY(30px)';
-    
-    featureCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(40px) scale(0.9)';
-    });
     
     // Create animated background elements
     createAnimatedBackground();
