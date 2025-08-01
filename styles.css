@@ -27,6 +27,9 @@ body {
 /* Color Scheme */
 :root {
     --navbar-height: 70px; /* Define navbar height as a variable */
+    --safe-area-top: env(safe-area-inset-top, 0px); /* Safe area for devices with notches */
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --total-top-offset: calc(var(--navbar-height) + var(--safe-area-top));
     --primary-color: #1e3a8a;
     --secondary-color: #64748b;
     --accent-color: #0ea5e9;
@@ -48,6 +51,7 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    top: env(safe-area-inset-top); /* Support for devices with notches */
     width: 100%;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -234,12 +238,13 @@ body {
     z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--navbar-height) 20px 0 20px;
+    padding: calc(var(--total-top-offset) + 2rem) 20px 2rem 20px;
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 4rem;
+    min-height: calc(100vh - var(--total-top-offset));
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
 }
@@ -2080,6 +2085,8 @@ body {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
+        padding: calc(var(--total-top-offset) + 3rem) 20px 3rem 20px;
+        min-height: calc(100vh - var(--total-top-offset));
     }
     
     .hero-visual {
@@ -2204,16 +2211,23 @@ body {
         color: var(--accent-color);
     }
     
+    .hero-content {
+        padding: calc(var(--total-top-offset) + 2rem) 15px 2rem 15px;
+    }
+    
     .hero-title {
         font-size: 2rem;
+        margin-bottom: 1rem;
     }
     
     .hero-subtitle {
         font-size: 1rem;
+        margin-bottom: 1rem;
     }
     
     .hero-description {
         font-size: 0.9rem;
+        margin-bottom: 1.5rem;
     }
     
     .hero-stats {
