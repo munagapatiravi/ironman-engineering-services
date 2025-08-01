@@ -127,14 +127,14 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
-    height: 100dvh; /* Dynamic viewport height for Safari */
+    height: calc(100vh - var(--total-top-offset));
+    height: calc(100dvh - var(--total-top-offset)); /* Dynamic viewport height for Safari */
     position: relative;
     display: flex;
     align-items: center;
     background: var(--gradient-primary);
     overflow: hidden;
-    padding-top: 0; /* Remove extra padding */
+    margin-top: var(--total-top-offset); /* Add top margin to account for navbar */
 }
 
 .hero-background {
@@ -1887,13 +1887,60 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: rgba(255, 255, 255, 0.9);
 }
 
 .contact-item i {
     color: var(--accent-color);
     width: 20px;
+    font-size: 1.2rem;
+}
+
+.contact-item div {
+    flex: 1;
+}
+
+.contact-item strong {
+    display: block;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.contact-item p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-benefits {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-benefits h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-benefits ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-benefits li i {
+    color: var(--success-color);
+    font-size: 1rem;
 }
 
 .social-links {
@@ -1936,6 +1983,20 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -1945,6 +2006,18 @@ body {
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
+}
+
+.form-group input[type="file"] {
+    padding: 0.5rem;
+    background: #f8fafc;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--secondary-color);
+    font-size: 0.875rem;
 }
 
 .form-group input:focus,
@@ -2074,10 +2147,11 @@ body {
 @media (max-width: 768px) {
     /* Safari mobile viewport fix */
     .hero {
-        height: 100vh;
-        height: -webkit-fill-available; /* Safari iOS fix */
-        min-height: 100vh;
-        min-height: -webkit-fill-available; /* Safari iOS fix */
+        height: calc(100vh - var(--total-top-offset));
+        height: calc(-webkit-fill-available - var(--total-top-offset)); /* Safari iOS fix */
+        min-height: calc(100vh - var(--total-top-offset));
+        min-height: calc(-webkit-fill-available - var(--total-top-offset)); /* Safari iOS fix */
+        margin-top: var(--total-top-offset); /* Ensure top margin on mobile */
     }
     
     /* Hero content for mobile */
@@ -2380,6 +2454,11 @@ body {
     
     .contact-form {
         padding: 1.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
     
     .container {
