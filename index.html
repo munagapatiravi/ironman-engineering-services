@@ -6,7 +6,7 @@
     <title>Ironman Engineering Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=2.0&clean=true">
+    <link rel="stylesheet" href="styles.css?v=3.0&animations=enhanced">
 </head>
 <body>
     <!-- Navigation -->
@@ -24,8 +24,21 @@
         </div>
     </nav>
 
-    <!-- Hero Section - No Animations -->
+    <!-- Hero Section - Enhanced with Dynamic Animations -->
     <section id="hero" class="hero">
+        <!-- Floating Particles for Visual Interest -->
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
         <div class="hero-content">
             <h1>Project Execution Starts With the Right Engineering Partner</h1>
             <p class="hero-description">We provide integrated engineering solutions — from delegated design and BIM modeling to fabrication-ready documentation — supporting EPCs, developers, and fabricators in fast-growing sectors like EV manufacturing, logistics, telecom, and commercial construction.</p>
@@ -78,9 +91,9 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services-section">
+    <section id="services" class="services-section fade-in">
         <div class="container">
-            <h2>Comprehensive Engineering Solutions</h2>
+            <h2 class="gradient-text">Comprehensive Engineering Solutions</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-drafting-compass"></i>

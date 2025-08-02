@@ -1,3 +1,119 @@
+// Enhanced Animation System for Dynamic User Experience
+
+// Scroll-based animations using Intersection Observer
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                
+                // Staggered animation for card groups
+                if (entry.target.classList.contains('service-card')) {
+                    const cards = document.querySelectorAll('.service-card');
+                    cards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add('visible');
+                        }, index * 200);
+                    });
+                }
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animatedElements = document.querySelectorAll(
+        '.fade-in, .slide-in-left, .slide-in-right, .scale-in, .service-card'
+    );
+    
+    animatedElements.forEach(el => observer.observe(el));
+}
+
+// Dynamic navbar background on scroll
+function initNavbarAnimation() {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        
+        if (scrolled > 100) {
+            navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+            navbar.style.backdropFilter = 'blur(25px)';
+        } else {
+            navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+            navbar.style.backdropFilter = 'blur(20px)';
+        }
+    });
+}
+
+// Parallax effect for hero section
+function initParallaxEffect() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.3;
+        hero.style.transform = `translateY(${rate}px)`;
+    });
+}
+
+// Enhanced typing effect for hero text
+function initTypingEffect() {
+    const heroTitle = document.querySelector('.hero h1');
+    if (!heroTitle) return;
+
+    const text = heroTitle.textContent;
+    heroTitle.textContent = '';
+    heroTitle.style.opacity = '1';
+    
+    let index = 0;
+    const typeInterval = setInterval(() => {
+        if (index < text.length) {
+            heroTitle.textContent += text.charAt(index);
+            index++;
+        } else {
+            clearInterval(typeInterval);
+            // Trigger description animation after title completes
+            const description = document.querySelector('.hero-description');
+            if (description) {
+                description.style.animation = 'slideInFromBottom 1s ease-out 0.2s forwards';
+            }
+        }
+    }, 100);
+}
+
+// Mouse-following animation for cards
+function initMouseFollowEffect() {
+    const cards = document.querySelectorAll('.hero-feature-card, .service-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        });
+    });
+}
+
 // Smooth scrolling for navigation links
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
@@ -13,6 +129,17 @@ function scrollToTop() {
 
 // Mobile navigation toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all animation systems
+    initScrollAnimations();
+    initNavbarAnimation();
+    initParallaxEffect();
+    initMouseFollowEffect();
+    
+    // Initialize typing effect with delay
+    setTimeout(() => {
+        initTypingEffect();
+    }, 1000);
+    
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-menu a');
