@@ -163,22 +163,7 @@ h1, h2, h3, h4 {
     animation: pulse 2s ease-in-out infinite;
 }
 
-/* Hero Feature Cards - Always Visible (No Animation Dependencies) */
-.hero-feature-card {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-    visibility: visible !important;
-    display: flex !important;
-}
-
-/* Remove any animation loading states that could hide cards */
-body:not(.animations-loaded) .hero-feature-card,
-body .hero-feature-card {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-    visibility: visible !important;
-    display: flex !important;
-}
+/* CLEAN HERO CARDS CSS - Single Source of Truth */
 
 /* Smooth transitions for all interactive elements */
 * {
@@ -466,10 +451,6 @@ section {
         margin-top: 1.5rem;
         width: 100%;
         max-width: 100%;
-    }
-    
-    .hero-feature-card {
-        padding: 0.75rem;
     }
 }
 
@@ -2398,5 +2379,45 @@ section {
     
     .metric-number {
         font-size: 2rem;
+    }
+}
+
+/* ULTIMATE OVERRIDE: Hero Cards Final CSS - Highest Priority */
+.hero-features {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.hero-features .hero-feature-card,
+.hero-feature-card {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    flex: 1 1 calc(50% - 0.5rem) !important;
+    min-width: 240px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 1rem !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    text-align: left !important;
+    transform: translateY(0) !important;
+}
+
+@media (max-width: 768px) {
+    .hero-features {
+        flex-direction: column !important;
+    }
+    
+    .hero-features .hero-feature-card,
+    .hero-feature-card {
+        flex: 1 1 100% !important;
+        min-width: auto !important;
     }
 }
