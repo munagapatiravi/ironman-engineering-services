@@ -1,15 +1,12 @@
-<!DOCTYPE h    <link rel="stylesheet" href="styles.css?v=1.8&fixed=duplicate-rules">`ml>
-<html lang="en" id="top">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>Ironman Engineering Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=1.5&t=<?php echo time(); ?>">
+    <link rel="stylesheet" href="styles.css?v=2.0&clean=true">
 </head>
 <body>
     <!-- Navigation -->
@@ -19,199 +16,61 @@
                 <h3>Ironman Engineering Services</h3>
             </div>
             <div class="nav-menu">
-                <a href="#top">Home</a>
+                <a href="#hero">Home</a>
                 <a href="#services">Services</a>
-                <a href="#industries">Industries</a>
-                <a href="#hybrid-model">Our Process</a>
-                <a href="#case-studies">Portfolio</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Get Quote</a>
-            </div>
-            <div class="nav-toggle">
-                <i class="fas fa-bars"></i>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - No Animations -->
     <section id="hero" class="hero">
-        <div class="hero-bg">
-            <div class="blueprint-overlay"></div>
-            <div class="hero-content">
-                <h1>Project Execution Starts With the Right Engineering Partner</h1>
-                <p class="hero-lead">We provide integrated engineering solutions — from delegated design and BIM modeling to fabrication-ready documentation — supporting EPCs, developers, and fabricators in fast-growing sectors like EV manufacturing, logistics, telecom, and commercial construction.</p>
-                <p class="hero-sub">We eliminate costly field rework with precise structural steel detailing, architectural metals design, and PE-stamped engineering documentation. Our proven process reduces project timelines while ensuring complete code compliance and constructability.</p>
-                <!-- Hero Feature Cards - Bulletproof Layout -->
-                <div class="hero-features" style="display: flex !important; flex-wrap: wrap !important; gap: 1rem; opacity: 1 !important; visibility: visible !important;">
-                    <div class="hero-feature-card" style="opacity: 1 !important; display: flex !important; visibility: visible !important; flex: 1 1 calc(50% - 0.5rem); min-width: 240px;">
-                        <div class="feature-icon" style="display: flex !important;">
-                            <i class="fas fa-certificate" style="display: block !important;"></i>
+        <div class="hero-content">
+            <h1>Project Execution Starts With the Right Engineering Partner</h1>
+            <p class="hero-description">We provide integrated engineering solutions — from delegated design and BIM modeling to fabrication-ready documentation — supporting EPCs, developers, and fabricators in fast-growing sectors like EV manufacturing, logistics, telecom, and commercial construction.</p>
+            
+            <!-- Hero Feature Cards - Block Layout -->
+            <div class="hero-cards-container">
+                <div class="hero-cards-row">
+                    <div class="hero-feature-card">
+                        <div class="card-icon">
+                            <i class="fas fa-certificate"></i>
                         </div>
-                        <div class="feature-content" style="display: block !important;">
+                        <div class="card-content">
                             <h4>PE-Stamped Engineering</h4>
                             <p>Licensed professional engineers providing code-compliant documentation</p>
                         </div>
                     </div>
-                    <div class="hero-feature-card" style="opacity: 1 !important; display: flex !important; visibility: visible !important; flex: 1 1 calc(50% - 0.5rem); min-width: 240px;">
-                        <div class="feature-icon" style="display: flex !important;">
-                            <i class="fas fa-clock" style="display: block !important;"></i>
+                    <div class="hero-feature-card">
+                        <div class="card-icon">
+                            <i class="fas fa-clock"></i>
                         </div>
-                        <div class="feature-content" style="display: block !important;">
+                        <div class="card-content">
                             <h4>24/7 Global Delivery</h4>
                             <p>Continuous design and production cycles across time zones</p>
                         </div>
                     </div>
-                    <div class="hero-feature-card" style="opacity: 1 !important; display: flex !important; visibility: visible !important; flex: 1 1 calc(50% - 0.5rem); min-width: 240px;">
-                        <div class="feature-icon" style="display: flex !important;">
-                            <i class="fas fa-crosshairs" style="display: block !important;"></i>
+                </div>
+                
+                <div class="hero-cards-row">
+                    <div class="hero-feature-card">
+                        <div class="card-icon">
+                            <i class="fas fa-crosshairs"></i>
                         </div>
-                        <div class="feature-content" style="display: block !important;">
+                        <div class="card-content">
                             <h4>Zero Field Rework</h4>
                             <p>Precise shop drawings that eliminate costly field modifications</p>
                         </div>
                     </div>
-                    <div class="hero-feature-card" style="opacity: 1 !important; display: flex !important; visibility: visible !important; flex: 1 1 calc(50% - 0.5rem); min-width: 240px;">
-                        <div class="feature-icon" style="display: flex !important;">
-                            <i class="fas fa-handshake" style="display: block !important;"></i>
+                    <div class="hero-feature-card">
+                        <div class="card-icon">
+                            <i class="fas fa-handshake"></i>
                         </div>
-                        <div class="feature-content" style="display: block !important;">
+                        <div class="card-content">
                             <h4>U.S.-Based Support</h4>
                             <p>Direct communication with dedicated project managers</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Preview -->
-    <section id="process" class="process-section">
-        <div class="container">
-            <h2>Our Proven Engineering Process</h2>
-            <div class="process-grid">
-                <div class="process-card">
-                    <i class="fas fa-search"></i>
-                    <h4>Analysis & Planning</h4>
-                    <p>Project assessment & requirements</p>
-                </div>
-                <div class="process-card">
-                    <i class="fas fa-cubes"></i>
-                    <h4>3D Modeling & BIM</h4>
-                    <p>Digital modeling & clash detection</p>
-                </div>
-                <div class="process-card">
-                    <i class="fas fa-certificate"></i>
-                    <h4>PE-Stamped Design</h4>
-                    <p>Licensed engineering & compliance</p>
-                </div>
-                <div class="process-card">
-                    <i class="fas fa-tools"></i>
-                    <h4>Fabrication Ready</h4>
-                    <p>Manufacturing-optimized deliverables</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section id="why-choose" class="why-choose-section">
-        <div class="container">
-            <h2>Why Choose Ironman Engineering Services?</h2>
-            <p class="section-intro">We solve the biggest challenges facing construction projects today with proven engineering expertise and reliable delivery</p>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-crosshairs"></i>
-                    </div>
-                    <h3>Precision Engineering</h3>
-                    <p>Our detailed shop drawings and 3D models eliminate field conflicts, reducing costly rework and keeping your projects on schedule.</p>
-                    <div class="benefit-metrics">
-                        <span class="metric">Zero Rework</span>
-                    </div>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Fast-Track Delivery</h3>
-                    <p>Meet aggressive construction schedules with our 24/7 global delivery model and parallel design workflows.</p>
-                    <div class="benefit-metrics">
-                        <span class="metric">30% Faster</span>
-                    </div>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-stamp"></i>
-                    </div>
-                    <h3>PE-Stamped Documentation</h3>
-                    <p>Licensed Professional Engineers provide code-compliant delegated design and connection calculations for project approval.</p>
-                    <div class="benefit-metrics">
-                        <span class="metric">Code Compliant</span>
-                    </div>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-sitemap"></i>
-                    </div>
-                    <h3>BIM Coordination</h3>
-                    <p>Advanced clash detection and trade coordination prevent conflicts before construction, saving time and money on-site.</p>
-                    <div class="benefit-metrics">
-                        <span class="metric">LOD 400+</span>
-                        <span class="metric">Clash-Free</span>
-                    </div>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Fabrication-Ready</h3>
-                    <p>Complete CNC data, material lists, and assembly sequences ensure smooth fabrication and installation processes.</p>
-                    <div class="benefit-metrics">
-                        <span class="metric">CNC Ready</span>
-                        <span class="metric">Complete BOMs</span>
-                    </div>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Dedicated Support</h3>
-                    <p>U.S.-based project managers provide direct communication and field support throughout your entire project lifecycle.</p>
-                    <div class="benefit-metrics">
-                        <span class="metric">Direct Contact</span>
-                        <span class="metric">Field Support</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="challenges-section">
-                <h3>Common Project Challenges We Solve</h3>
-                <div class="challenges-grid">
-                    <div class="challenge-card">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <h4>Field Rework & Delays</h4>
-                        <p>Imprecise drawings lead to costly field modifications. Our detailed shop drawings eliminate surprises and keep projects on track.</p>
-                    </div>
-                    <div class="challenge-card">
-                        <i class="fas fa-clock"></i>
-                        <h4>Tight Construction Schedules</h4>
-                        <p>Accelerated timelines demand immediate engineering support. Our global delivery model provides 24/7 design capability.</p>
-                    </div>
-                    <div class="challenge-card">
-                        <i class="fas fa-puzzle-piece"></i>
-                        <h4>Trade Coordination Issues</h4>
-                        <p>Multiple trades working in the same space create conflicts. Our BIM coordination prevents clashes before construction.</p>
-                    </div>
-                    <div class="challenge-card">
-                        <i class="fas fa-industry"></i>
-                        <h4>Fabrication Bottlenecks</h4>
-                        <p>Incomplete documentation slows fabrication. We provide complete CNC data and detailed assembly sequences.</p>
                     </div>
                 </div>
             </div>
@@ -222,405 +81,39 @@
     <section id="services" class="services-section">
         <div class="container">
             <h2>Comprehensive Engineering Solutions</h2>
-            <p class="section-intro">Precise structural detailing, delegated engineering, and fabrication-ready documentation for the modern construction industry</p>
-            
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-drafting-compass"></i>
                     <h3>Structural Steel Detailing</h3>
-                    <ul>
-                        <li>Precise shop drawings and fabrication details for steel frameworks</li>
-                        <li>3D modeling with clash detection and constructability reviews</li>
-                        <li>LOD-based structural modeling for digital delivery</li>
-                        <li>CNC data preparation and bills of material</li>
-                        <li>Reduces errors and field rework for fabricators</li>
-                        <li>PE-stamped delegated connection design</li>
-                    </ul>
-                    <div class="service-tools">
-                        <span class="tool">Tekla Structures</span>
-                        <span class="tool">SDS/2</span>
-                        <span class="tool">Revit</span>
-                        <span class="tool">AutoCAD</span>
-                        <span class="tool">STAAD Pro</span>
-                    </div>
+                    <p>Precise shop drawings and fabrication details for steel frameworks with 3D modeling with clash detection and constructability reviews.</p>
                 </div>
                 
                 <div class="service-card">
                     <i class="fas fa-building"></i>
                     <h3>Architectural Metals Detailing</h3>
-                    <ul>
-                        <li>Custom detailing for stairs, railings, and façades</li>
-                        <li>Curtain wall and cladding system design</li>
-                        <li>Integration of design intent with constructability</li>
-                        <li>Fabrication-ready shop drawings for specialty fabricators</li>
-                        <li>Direct coordination with architects and GCs</li>
-                        <li>High-precision aesthetic and structural elements</li>
-                    </ul>
-                    <div class="service-tools">
-                        <span class="tool">Revit</span>
-                        <span class="tool">Tekla</span>
-                        <span class="tool">Bluebeam</span>
-                        <span class="tool">Navisworks</span>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <i class="fas fa-industry"></i>
-                    <h3>PEMB Design & Detailing</h3>
-                    <ul>
-                        <li>Pre-Engineered Metal Building design and detailing</li>
-                        <li>High-volume, repeatable project segments</li>
-                        <li>Works with PEMB manufacturers and contractors</li>
-                        <li>Structural analysis and connection design</li>
-                        <li>Fast-track delivery for industrial projects</li>
-                        <li>Value engineering for material optimization</li>
-                    </ul>
-                    <div class="service-tools">
-                        <span class="tool">STAAD Pro</span>
-                        <span class="tool">SAP2000</span>
-                        <span class="tool">Tekla</span>
-                        <span class="tool">AutoCAD</span>
-                    </div>
+                    <p>Custom detailing for stairs, railings, and façades with curtain wall and cladding system design.</p>
                 </div>
                 
                 <div class="service-card">
                     <i class="fas fa-certificate"></i>
                     <h3>Delegated Engineering</h3>
-                    <ul>
-                        <li>Design of specialty components by licensed engineers</li>
-                        <li>Connection design for stairs, platforms, and curtain walls</li>
-                        <li>Critical for fast-track construction projects</li>
-                        <li>PE-stamped documentation for code compliance</li>
-                        <li>Serves contractors, fabricators, and specialty subs</li>
-                        <li>Reduces project risk and liability</li>
-                    </ul>
-                    <div class="service-tools">
-                        <span class="tool">IDEA StatiCa</span>
-                        <span class="tool">STAAD Pro</span>
-                        <span class="tool">SAP2000</span>
-                        <span class="tool">Tekla</span>
-                    </div>
+                    <p>Design of specialty components by licensed engineers with PE-stamped documentation for code compliance.</p>
                 </div>
                 
                 <div class="service-card">
                     <i class="fas fa-cubes"></i>
                     <h3>BIM Modeling & Coordination</h3>
-                    <ul>
-                        <li>LOD-based structural and façade modeling</li>
-                        <li>Clash detection and trade coordination</li>
-                        <li>Digital delivery and model-based workflows</li>
-                        <li>IFC-compliant open BIM standards</li>
-                        <li>Serves GCs, engineers, and project owners</li>
-                        <li>Integrated project delivery support</li>
-                    </ul>
-                    <div class="service-tools">
-                        <span class="tool">Revit</span>
-                        <span class="tool">Navisworks</span>
-                        <span class="tool">Tekla</span>
-                        <span class="tool">BIM 360</span>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Fabrication-Ready Documentation</h3>
-                    <ul>
-                        <li>Final deliverables optimized for manufacturing</li>
-                        <li>Shop drawings with CNC data and material lists</li>
-                        <li>Bills of material and assembly sequences</li>
-                        <li>Essential for accurate fabrication and field assembly</li>
-                        <li>Quality control and dimensional verification</li>
-                        <li>Digital fabrication workflow integration</li>
-                    </ul>
-                    <div class="service-tools">
-                        <span class="tool">Tekla</span>
-                        <span class="tool">SDS/2</span>
-                        <span class="tool">CNC Programming</span>
-                        <span class="tool">Material Lists</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="core-specializations">
-                <h3>Core Structural Engineering Specializations</h3>
-                <div class="specializations-grid">
-                    <div class="specialization-card">
-                        <i class="fas fa-cube"></i>
-                        <h4>Precast Concrete Detailing</h4>
-                        <p>Reinforced precast component drawings, connection design, and installation planning for modular construction</p>
-                    </div>
-                    <div class="specialization-card">
-                        <i class="fas fa-wrench"></i>
-                        <h4>Miscellaneous Steel</h4>
-                        <p>Detailed drawings for railings, ladders, grating, bollards, and architectural steel elements</p>
-                    </div>
-                    <div class="specialization-card">
-                        <i class="fas fa-calculator"></i>
-                        <h4>Structural Estimating</h4>
-                        <p>Quantity take-offs, material pricing, and value engineering for cost optimization</p>
-                    </div>
-                    <div class="specialization-card">
-                        <i class="fas fa-robot"></i>
-                        <h4>Digital Fabrication</h4>
-                        <p>CNC programming, nested cutting plans, and robotic welding preparation</p>
-                    </div>
+                    <p>LOD-based structural and façade modeling with clash detection and trade coordination.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Hybrid Delivery Model Section -->
-    <section id="hybrid-model" class="hybrid-model-section">
-        <div class="container">
-            <h2>Hybrid Onsite-Offshore Delivery Model</h2>
-            <p class="section-intro">Our competitive advantage: U.S.-based leadership with scalable offshore execution</p>
-            
-            <div class="delivery-model-grid">
-                <div class="delivery-card">
-                    <div class="delivery-icon">
-                        <i class="fas fa-flag-usa"></i>
-                    </div>
-                    <h3>U.S.-Based Leadership</h3>
-                    <ul>
-                        <li>Project Management led onsite ensuring direct client alignment</li>
-                        <li>Client Engagement handled exclusively by U.S. team</li>
-                        <li>QA and constructability checks for U.S. code compliance</li>
-                        <li>Field coordination and installation support</li>
-                    </ul>
-                </div>
-                
-                <div class="delivery-card">
-                    <div class="delivery-icon">
-                        <i class="fas fa-globe-asia"></i>
-                    </div>
-                    <h3>Offshore Execution (India)</h3>
-                    <ul>
-                        <li>Skilled engineers executing design and drafting work</li>
-                        <li>Core 3D modeling and iterative updates</li>
-                        <li>Quantity take-offs and material analysis</li>
-                        <li>24-hour delivery cycles across time zones</li>
-                    </ul>
-                </div>
-                
-                <div class="delivery-card">
-                    <div class="delivery-icon">
-                        <i class="fas fa-link"></i>
-                    </div>
-                    <h3>Seamless Integration</h3>
-                    <ul>
-                        <li>Clear process handoffs and structured QA protocols</li>
-                        <li>Shared project management tools and communication</li>
-                        <li>Synchronized output across time zones</li>
-                        <li>Built-in redundancy and quality assurance</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="delivery-benefits">
-                <div class="benefit-item">
-                    <i class="fas fa-clock"></i>
-                    <h4>Continuous Delivery</h4>
-                    <p>24/7 design and production cycles</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-dollar-sign"></i>
-                    <h4>Cost Efficiency</h4>
-                    <p>Significant savings with offshore capacity</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-expand-arrows-alt"></i>
-                    <h4>Scalable Growth</h4>
-                    <p>Infrastructure to handle aggressive timelines</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>Quality Assurance</h4>
-                    <p>Built-in QA processes for compliance</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Standards & Certifications Section -->
-    <section id="standards" class="standards-section">
-        <div class="container">
-            <h2>Standards & Certifications</h2>
-            <p class="section-intro">Compliant with industry-leading standards and codes</p>
-            
-            <div class="standards-grid">
-                <div class="standard-card">
-                    <div class="standard-logo">AISC</div>
-                    <p>American Institute of Steel Construction</p>
-                </div>
-                <div class="standard-card">
-                    <div class="standard-logo">CISC</div>
-                    <p>Canadian Institute of Steel Construction</p>
-                </div>
-                <div class="standard-card">
-                    <div class="standard-logo">AWS</div>
-                    <p>American Welding Society</p>
-                </div>
-                <div class="standard-card">
-                    <div class="standard-logo">ACI</div>
-                    <p>American Concrete Institute</p>
-                </div>
-                <div class="standard-card">
-                    <div class="standard-logo">BS</div>
-                    <p>British Standards</p>
-                </div>
-                <div class="standard-card">
-                    <div class="standard-logo">IS</div>
-                    <p>Indian Standards</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Industries Section -->
-    <section id="industries" class="industries-section">
-        <div class="container">
-            <h2>Industries We Serve</h2>
-            <div class="industries-grid">
-                <div class="industry-card"><i class="fas fa-bolt"></i> EV Manufacturing</div>
-                <div class="industry-card"><i class="fas fa-warehouse"></i> Logistics</div>
-                <div class="industry-card"><i class="fas fa-snowflake"></i> Cold Storage</div>
-                <div class="industry-card"><i class="fas fa-hospital"></i> Healthcare</div>
-                <div class="industry-card"><i class="fas fa-graduation-cap"></i> Educational</div>
-                <div class="industry-card"><i class="fas fa-broadcast-tower"></i> Telecom</div>
-                <div class="industry-card"><i class="fas fa-car"></i> Automotive</div>
-                <div class="industry-card"><i class="fas fa-solar-panel"></i> Renewable Energy</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="case-studies" class="portfolio-section">
-        <div class="container">
-            <h2>Featured Case Studies</h2>
-            <p class="section-intro">Showcasing engineering excellence in action</p>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <i class="fas fa-building"></i>
-                    <h4>Tesla Gigafactory Expansion</h4>
-                    <p>Completed 3,500-ton steel detailing for this high-profile EV manufacturing facility in just 18 weeks, supporting rapid construction timelines.</p>
-                    <div class="project-metrics">
-                        <span class="metric">3,500 tons</span>
-                        <span class="metric">18 weeks</span>
-                        <span class="metric">Zero delays</span>
-                    </div>
-                </div>
-                <div class="portfolio-card">
-                    <i class="fas fa-warehouse"></i>
-                    <h4>Amazon Distribution Center</h4>
-                    <p>Delivered complex precast and structural steel detailing for a 2.5M sq ft logistics facility with advanced automation systems.</p>
-                    <div class="project-metrics">
-                        <span class="metric">2.5M sq ft</span>
-                        <span class="metric">24/7 delivery</span>
-                        <span class="metric">100% accuracy</span>
-                    </div>
-                </div>
-                <div class="portfolio-card">
-                    <i class="fas fa-hospital"></i>
-                    <h4>Medical Center Complex</h4>
-                    <p>Architectural metals and structural detailing for a state-of-the-art healthcare facility with specialized clean room requirements.</p>
-                    <div class="project-metrics">
-                        <span class="metric">Medical grade</span>
-                        <span class="metric">Clean rooms</span>
-                        <span class="metric">Code compliant</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Comparison Section -->
-            <div class="comparison-section">
-                <h3>Built for Speed, Cost, and Execution Confidence</h3>
-                <p class="comparison-intro">Our hybrid model delivers superior value compared to traditional approaches</p>
-                
-                <div class="comparison-table">
-                    <div class="comparison-column">
-                        <h4>U.S.-Only Firms</h4>
-                        <ul>
-                            <li class="negative">High labor costs</li>
-                            <li class="positive">Local presence</li>
-                            <li class="negative">Limited scalability</li>
-                            <li class="positive">Quality control</li>
-                        </ul>
-                    </div>
-                    <div class="comparison-column highlight">
-                        <h4>Our Hybrid Model</h4>
-                        <ul>
-                            <li class="positive">Optimized cost structure</li>
-                            <li class="positive">U.S. leadership + global delivery</li>
-                            <li class="positive">Rapid scaling capability</li>
-                            <li class="positive">Built-in QA processes</li>
-                        </ul>
-                    </div>
-                    <div class="comparison-column">
-                        <h4>Offshore-Only</h4>
-                        <ul>
-                            <li class="positive">Lower costs</li>
-                            <li class="negative">Communication gaps</li>
-                            <li class="positive">Scalable resources</li>
-                            <li class="negative">Quality concerns</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
+    <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
             <h2>Experienced Engineering Team</h2>
-            <p class="section-intro">Licensed professionals with deep expertise in structural engineering, BIM modeling, and construction coordination</p>
-            
-            <div class="about-grid">
-                <div class="about-card">
-                    <i class="fas fa-user-tie"></i>
-                    <h3>Iron Man</h3>
-                    <h4>Principal Engineer & Founder</h4>
-                    <p>20+ years of structural engineering experience across commercial, industrial, and infrastructure projects. Licensed Professional Engineer with expertise in steel design, delegated engineering, and complex connection details. Led engineering teams on major construction projects nationwide.</p>
-                    <div class="credentials">
-                        <span class="credential">Licensed PE (Multiple States)</span>
-                        <span class="credential">500+ Projects Completed</span>
-                        <span class="credential">Engineering Team Leadership</span>
-                    </div>
-                </div>
-                <div class="about-card">
-                    <i class="fas fa-user-cog"></i>
-                    <h3>Professor X</h3>
-                    <h4>Project Operations Director</h4>
-                    <p>Extensive experience managing large-scale engineering projects with focus on quality assurance, client coordination, and delivery excellence. Expert in BIM workflows, project scheduling, and multi-discipline coordination for complex construction projects.</p>
-                    <div class="credentials">
-                        <span class="credential">Project Management Excellence</span>
-                        <span class="credential">BIM Coordination Specialist</span>
-                        <span class="credential">On-Time Delivery Record</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="capabilities-section">
-                <h3>Comprehensive Engineering Capabilities</h3>
-                <div class="capabilities-grid">
-                    <div class="capability-card">
-                        <i class="fas fa-drafting-compass"></i>
-                        <h4>Structural Engineering</h4>
-                        <p>Licensed engineers providing delegated design, connection calculations, and PE-stamped documentation for code compliance</p>
-                    </div>
-                    <div class="capability-card">
-                        <i class="fas fa-cube"></i>
-                        <h4>BIM Modeling Team</h4>
-                        <p>Certified professionals in Revit, Tekla, and Navisworks delivering clash-free models and detailed coordination</p>
-                    </div>
-                    <div class="capability-card">
-                        <i class="fas fa-headset"></i>
-                        <h4>Client Support</h4>
-                        <p>Dedicated project managers ensuring clear communication, schedule adherence, and quality deliverables</p>
-                    </div>
-                </div>
-            </div>
+            <p>Licensed professionals with deep expertise in structural engineering, BIM modeling, and construction coordination</p>
         </div>
     </section>
 
@@ -628,7 +121,7 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Ready to Get Started?</h2>
-            <p>Contact us today for a free project consultation and detailed quote. Our team is ready to help you meet your tightest deadlines with precision engineering services.</p>
+            <p>Contact us today for a free project consultation and detailed quote.</p>
             
             <div class="contact-info">
                 <div class="contact-item">
@@ -641,67 +134,6 @@
                     <h4>Email</h4>
                     <p>projects@ironmanengineering.com</p>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-clock"></i>
-                    <h4>Response Time</h4>
-                    <p>Free quotes within 24 hours</p>
-                </div>
-            </div>
-
-            <div class="expectations-section">
-                <h3>What You Can Expect:</h3>
-                <ul>
-                    <li>Free project consultation and estimate</li>
-                    <li>Dedicated project manager assigned</li>
-                    <li>Detailed scope and timeline proposal</li>
-                    <li>PE-stamped deliverables guarantee</li>
-                </ul>
-            </div>
-
-            <div class="form-section">
-                <h3>Get Your Free Quote</h3>
-                <form id="projectForm">
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Full Name *" required>
-                        <input type="text" name="company" placeholder="Company *" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="email" name="email" placeholder="Email *" required>
-                        <input type="tel" name="phone" placeholder="Phone">
-                    </div>
-                    <div class="form-row">
-                        <select name="service" required>
-                            <option value="">Service Needed *</option>
-                            <option value="structural-steel">Structural Steel Detailing</option>
-                            <option value="architectural-metals">Architectural Metals</option>
-                            <option value="pemb">PEMB Design & Detailing</option>
-                            <option value="delegated-engineering">Delegated Engineering</option>
-                            <option value="bim-modeling">BIM Modeling & Coordination</option>
-                            <option value="multiple">Multiple Services</option>
-                        </select>
-                        <select name="timeline">
-                            <option value="">Project Timeline</option>
-                            <option value="immediate">Immediate (< 2 weeks)</option>
-                            <option value="short">Short-term (2-4 weeks)</option>
-                            <option value="medium">Medium-term (1-3 months)</option>
-                            <option value="long">Long-term (3+ months)</option>
-                        </select>
-                    </div>
-                    <select name="budget">
-                        <option value="">Project Budget Range</option>
-                        <option value="under-25k">Under $25,000</option>
-                        <option value="25k-50k">$25,000 - $50,000</option>
-                        <option value="50k-100k">$50,000 - $100,000</option>
-                        <option value="100k-plus">$100,000+</option>
-                    </select>
-                    <textarea name="description" rows="4" placeholder="Project Description *" required></textarea>
-                    <div class="file-upload">
-                        <label for="files">Upload Files (Optional)</label>
-                        <input type="file" id="files" name="files" multiple accept=".pdf,.dwg,.rvt,.jpg,.png">
-                        <small>Upload plans, sketches, or reference documents (PDF, DWG, RVT, images)</small>
-                    </div>
-                    <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Get Free Quote</button>
-                </form>
             </div>
         </div>
     </section>
@@ -709,61 +141,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Engineering Excellence</h4>
-                    <p>Integrated design, detailing, and delivery for the construction industry</p>
-                    <div class="footer-contact">
-                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                        <p><i class="fas fa-envelope"></i> projects@ironmanengineering.com</p>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">Structural Steel Detailing</a></li>
-                        <li><a href="#services">Architectural Metals</a></li>
-                        <li><a href="#services">BIM Modeling</a></li>
-                        <li><a href="#services">Delegated Engineering</a></li>
-                        <li><a href="#services">PEMB Design</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#about">Leadership</a></li>
-                        <li><a href="#case-studies">Portfolio</a></li>
-                        <li><a href="#standards">Standards</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="footer-social">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="mailto:projects@ironmanengineering.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
-                    <div class="footer-certifications">
-                        <p><strong>Certifications:</strong></p>
-                        <p>AISC • AWS • ACI • Licensed PE</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Ironman Engineering Services. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Quality Policy</a>
-                </div>
-            </div>
+            <p>&copy; 2025 Ironman Engineering Services. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Scripts -->
-    <script src="script.js?v=1.6&cache=20250801mobile"></script>
-    <script src="enhanced-animations.js?v=1.6&cache=20250801mobile"></script>
 </body>
 </html>
