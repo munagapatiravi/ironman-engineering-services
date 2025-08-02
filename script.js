@@ -1,5 +1,46 @@
 // Enhanced Animation System for Dynamic User Experience
 
+// Mobile viewport height fix for Safari and Chrome
+function setMobileVH() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Mobile Safari and Chrome specific fixes
+function initMobileFixes() {
+    // Set initial viewport height
+    setMobileVH();
+    
+    // Update on resize and orientation change
+    window.addEventListener('resize', setMobileVH);
+    window.addEventListener('orientationchange', () => {
+        setTimeout(setMobileVH, 100); // Delay for orientation change
+    });
+    
+    // Disable iOS Safari bounce effect
+    document.addEventListener('touchmove', function(e) {
+        if (e.target.closest('.navbar') || e.target.closest('.hero')) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+    
+    // Fix iOS Safari viewport unit issues
+    if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.minHeight = '-webkit-fill-available';
+        }
+    }
+    
+    // Prevent zoom on input focus for iOS
+    if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.style.fontSize = '16px';
+        });
+    }
+}
+
 // Scroll-based animations using Intersection Observer
 function initScrollAnimations() {
     const observerOptions = {
@@ -129,11 +170,18 @@ function scrollToTop() {
 
 // Mobile navigation toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize mobile fixes first
+    initMobileFixes();
+    
     // Initialize all animation systems
     initScrollAnimations();
     initNavbarAnimation();
     initParallaxEffect();
-    initMouseFollowEffect();
+    
+    // Only initialize mouse effects on non-touch devices
+    if (!('ontouchstart' in window)) {
+        initMouseFollowEffect();
+    }
     
     // Initialize typing effect with delay
     setTimeout(() => {
