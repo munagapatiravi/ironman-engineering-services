@@ -214,10 +214,37 @@ function optimizeSectionsForTablet() {
 function disableComplexAnimations() {
     const style = document.createElement('style');
     style.textContent = `
+        /* Critical hero text visibility fixes */
+        .mobile-device .hero h1,
+        .mobile-device .hero-content h1 {
+            opacity: 1 !important;
+            animation: none !important;
+            transform: none !important;
+            visibility: visible !important;
+            color: #ffffff !important;
+        }
+        
+        .mobile-device .hero-description,
+        .mobile-device .hero-content p {
+            opacity: 0.9 !important;
+            animation: none !important;
+            transform: none !important;
+            visibility: visible !important;
+            color: #ffffff !important;
+        }
+        
+        .mobile-device .hero-cards-container,
+        .mobile-device .hero-feature-card {
+            opacity: 1 !important;
+            animation: none !important;
+            transform: none !important;
+            visibility: visible !important;
+        }
+        
+        /* Disable other complex animations */
         .mobile-device .hero::before,
         .mobile-device .hero::after,
-        .mobile-device .particle,
-        .mobile-device .hero-feature-card {
+        .mobile-device .particle {
             animation: none !important;
         }
         
@@ -233,6 +260,17 @@ function disableComplexAnimations() {
         }
     `;
     document.head.appendChild(style);
+    
+    // Also force immediate visibility via DOM manipulation
+    setTimeout(() => {
+        const heroElements = document.querySelectorAll('.hero h1, .hero-description, .hero-cards-container, .hero-feature-card');
+        heroElements.forEach(el => {
+            el.style.opacity = '1';
+            el.style.visibility = 'visible';
+            el.style.animation = 'none';
+            el.style.transform = 'none';
+        });
+    }, 100);
 }
 
 // Reduce animation complexity for tablets
