@@ -2,19 +2,25 @@
    MOBILE-OPTIMIZED STYLES
    ================================ */
 
-/* CSS Variables */
+/* CSS Variables - Updated to match desktop version */
 :root {
     --primary-color: #1e3a8a;
-    --secondary-color: #3b82f6;
+    --secondary-color: #64748b;
     --accent-color: #0ea5e9;
-    --white: #ffffff;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --dark-gray: #374151;
     --light-gray: #f8fafc;
-    --dark-gray: #1f2937;
+    --white: #ffffff;
     --text-color: #374151;
     --border-color: #e5e7eb;
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
-    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 /* Reset and Base */
@@ -129,7 +135,7 @@ body {
 
 /* Mobile Hero */
 .hero {
-    background: var(--gradient);
+    background: var(--gradient-hero);
     color: var(--white);
     padding: 100px 1rem 60px;
     text-align: center;
@@ -208,7 +214,7 @@ body {
 /* Mobile Features */
 .mobile-features {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 2rem;
 }
@@ -217,19 +223,43 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
-    padding: 1rem;
-    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
 }
 
 .feature-item i {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--white);
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    margin-top: 0.25rem;
+    flex-shrink: 0;
 }
 
-.feature-item span {
+.feature-content {
+    flex: 1;
+}
+
+.feature-content h4 {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.feature-content span {
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.9rem;
-    font-weight: 500;
+    line-height: 1.4;
+    display: block;
 }
 
 /* Sections */
@@ -301,7 +331,7 @@ h2 {
 .service-icon {
     width: 60px;
     height: 60px;
-    background: var(--gradient);
+    background: var(--gradient-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -324,6 +354,26 @@ h2 {
 .service-card p {
     font-size: 0.95rem;
     line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Service Tools */
+.service-tools {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.tool {
+    background: var(--light-gray);
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--primary-color);
 }
 
 /* Industry Items */
@@ -364,7 +414,8 @@ h2 {
 
 .industry-info p {
     font-size: 0.9rem;
-    opacity: 0.8;
+    color: var(--text-color);
+    margin: 0;
 }
 
 /* Benefits */
@@ -372,6 +423,52 @@ h2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+}
+
+.benefit-item {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.benefit-icon i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.benefit-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.benefit-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin: 0;
 }
 
 .benefit-item {
