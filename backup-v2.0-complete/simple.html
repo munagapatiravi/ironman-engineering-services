@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ironman Engineering Services - Simple Version</title>
+    <style>
+        /* Reset and Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Hero Section - Simple and Direct */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Hero Cards - Simple Block Layout */
+        .hero-cards {
+            display: block;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
+
+        .card-row {
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .hero-card {
+            display: block;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .hero-card h3 {
+            color: #60a5fa;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-card p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Desktop: Side by side */
+        @media (min-width: 768px) {
+            .card-row {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+            }
+            
+            .hero-card {
+                flex: 1;
+                max-width: 380px;
+                margin: 0;
+            }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 20px;
+            background: #f8fafc;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: #1e3a8a;
+        }
+
+        .services-grid {
+            display: block;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-item {
+            background: white;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 992px) {
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .service-item {
+                margin: 0;
+            }
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #1e3a8a;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #60a5fa;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .btn:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Project Execution Starts With the Right Engineering Partner</h1>
+        <p>We provide integrated engineering solutions — from delegated design and BIM modeling to fabrication-ready documentation — supporting EPCs, developers, and fabricators in fast-growing sectors.</p>
+        
+        <div class="hero-cards">
+            <div class="card-row">
+                <div class="hero-card">
+                    <h3>🏆 PE-Stamped Engineering</h3>
+                    <p>Licensed professional engineers providing code-compliant documentation</p>
+                </div>
+                <div class="hero-card">
+                    <h3>⏰ 24/7 Global Delivery</h3>
+                    <p>Continuous design and production cycles across time zones</p>
+                </div>
+            </div>
+            
+            <div class="card-row">
+                <div class="hero-card">
+                    <h3>🎯 Zero Field Rework</h3>
+                    <p>Precise shop drawings that eliminate costly field modifications</p>
+                </div>
+                <div class="hero-card">
+                    <h3>🤝 U.S.-Based Support</h3>
+                    <p>Direct communication with dedicated project managers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Engineering Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Structural Steel Detailing</h3>
+                <p>Precise shop drawings and fabrication details for steel frameworks with 3D modeling and clash detection.</p>
+            </div>
+            <div class="service-item">
+                <h3>Architectural Metals Detailing</h3>
+                <p>Custom detailing for stairs, railings, and façades with fabrication-ready shop drawings.</p>
+            </div>
+            <div class="service-item">
+                <h3>BIM Modeling & Coordination</h3>
+                <p>LOD-based structural modeling with clash detection and trade coordination.</p>
+            </div>
+            <div class="service-item">
+                <h3>Delegated Engineering</h3>
+                <p>PE-stamped documentation and connection design for code compliance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Ready to Get Started?</h2>
+        <div class="contact-info">
+            <p>📧 projects@ironmanengineering.com</p>
+            <p>📞 +1 (555) 123-4567</p>
+        </div>
+        <a href="mailto:projects@ironmanengineering.com" class="btn">Get Free Quote</a>
+    </section>
+</body>
+</html>
