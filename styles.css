@@ -1933,50 +1933,161 @@ html {
 .mobile-device .hero-content h1 {
     font-size: 2.5rem;
     line-height: 1.2;
+    margin-bottom: 1rem;
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
 }
 
 .mobile-device .hero-content p {
     font-size: 1.1rem;
     margin: 1rem 0 2rem;
+    opacity: 0.9 !important;
+    animation: none !important;
+    transform: none !important;
+    line-height: 1.5;
+}
+
+.mobile-device .hero-description {
+    margin-bottom: 2rem;
+    opacity: 0.9 !important;
+    animation: none !important;
+    transform: none !important;
+}
+
+.mobile-device .hero-cards-container {
+    margin-top: 2rem;
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+}
+
+.mobile-device .hero-cards-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    margin-bottom: 1rem !important;
+    justify-content: stretch !important;
+}
+
+.mobile-device .hero-feature-card {
+    max-width: none !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1.2rem;
+    flex: none !important;
 }
 
 .mobile-device .section-content {
     padding: 0 1rem;
 }
 
-.mobile-device .grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+/* Mobile grid optimizations - specific grids only */
+.mobile-device .challenges-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
 }
 
-.mobile-device .grid.grid-2 {
-    grid-template-columns: 1fr;
+.mobile-device .challenge {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
 }
 
-.mobile-device .grid.grid-3 {
-    grid-template-columns: 1fr;
+.mobile-device .industries-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
 }
 
-.mobile-device .grid.grid-4 {
-    grid-template-columns: 1fr;
+.mobile-device .industry-card {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+}
+
+.mobile-device .specializations-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+}
+
+.mobile-device .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+}
+
+.mobile-device .process-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
 }
 
 /* Tablet-specific optimizations */
-.tablet-device .grid.grid-2 {
-    grid-template-columns: repeat(2, 1fr);
+.tablet-device .hero-cards-row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1rem !important;
+    justify-content: center !important;
 }
 
-.tablet-device .grid.grid-3 {
-    grid-template-columns: repeat(2, 1fr);
+.tablet-device .hero-feature-card {
+    flex: 1 !important;
+    max-width: 380px !important;
 }
 
-.tablet-device .grid.grid-4 {
-    grid-template-columns: repeat(2, 1fr);
+.tablet-device .challenges-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.tablet-device .industries-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.tablet-device .specializations-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.tablet-device .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.tablet-device .process-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
 }
 
 /* Desktop-specific optimizations */
-.desktop-device .grid.grid-4 {
-    grid-template-columns: repeat(2, 1fr);
+.desktop-device .hero-cards-row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 2rem !important;
+    justify-content: center !important;
+}
+
+.desktop-device .hero-feature-card {
+    flex: 1 !important;
+    max-width: 380px !important;
+}
+
+.desktop-device .challenges-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.desktop-device .industries-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.desktop-device .specializations-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.desktop-device .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.desktop-device .process-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
 }
 
 /* Mobile Navigation Overlay */
