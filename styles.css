@@ -1,13 +1,30 @@
-/* Simple CSS - No Animations, No Complex Features */
+                                                                                                                                                                                /* Simple CSS - No Animations, No Complex Features */
 
 :root {
-    --primary-blue: #1e3a8a;
-    --light-blue: #3b82f6;
-    --accent-blue: #60a5fa;
-    --white: #ffffff;
-    --light-gray: #f8fafc;
-    --dark-gray: #374151;
     --navbar-height: 70px;
+    --primary-color: #1e3a8a;
+    --secondary-color: #64748b;
+    --accent-color: #0ea5e9;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --dark-gray: #374151;
+    --light-gray: #f8fafc;
+    --white: #ffffff;
+    --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    --gradient-secondary: linear-gradient(135deg, #64748b 0%, #94a3b8 100%);
+    --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    --gradient-premium: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-glass: rgba(255, 255, 255, 0.1);
+    --gradient-shimmer: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.5);
+    --shadow-gold: 0 0 30px rgba(245, 158, 11, 0.3);
+    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 /* Reset */
@@ -35,11 +52,14 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(30, 58, 138, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
     padding: 0;
     height: var(--navbar-height);
+    box-shadow: var(--shadow-lg);
 }
 
 .nav-container {
@@ -71,18 +91,33 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--accent-blue);
+    color: var(--accent-color);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 100%);
+    background: var(--gradient-hero);
     color: var(--white);
     padding: calc(var(--navbar-height) + 80px) 20px 80px;
     text-align: center;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 121, 198, 0.2) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .hero-content {
@@ -140,7 +175,7 @@ body {
 .card-icon {
     width: 50px;
     height: 50px;
-    background: rgba(96, 165, 250, 0.2);
+    background: rgba(14, 165, 233, 0.2);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -150,7 +185,7 @@ body {
 
 .card-icon i {
     font-size: 1.5rem;
-    color: var(--accent-blue);
+    color: var(--accent-color);
 }
 
 .card-content h4 {
@@ -192,7 +227,7 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--primary-blue);
+    color: var(--primary-color);
 }
 
 .services-grid {
@@ -207,20 +242,27 @@ body {
     border-radius: 12px;
     margin: 2rem auto;
     max-width: 500px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-lg);
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    transition: all 0.3s ease;
 }
 
 .service-card i {
     font-size: 3rem;
-    color: var(--light-blue);
+    color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
 .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--primary-blue);
+    color: var(--primary-color);
 }
 
 .service-card p {
@@ -250,7 +292,7 @@ body {
 .about-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--primary-blue);
+    color: var(--primary-color);
 }
 
 .about-section p {
@@ -263,26 +305,44 @@ body {
 /* Contact Section */
 .contact-section {
     padding: 80px 20px;
-    background: var(--primary-blue);
+    background: var(--gradient-primary);
     color: var(--white);
     text-align: center;
+    position: relative;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .contact-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-section > p {
     font-size: 1.2rem;
     margin-bottom: 3rem;
     opacity: 0.9;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-info {
     display: block;
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-item {
@@ -292,7 +352,7 @@ body {
 
 .contact-item i {
     font-size: 2rem;
-    color: var(--accent-blue);
+    color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
