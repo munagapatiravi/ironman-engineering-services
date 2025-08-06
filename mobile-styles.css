@@ -65,6 +65,24 @@ body {
     padding: 1rem;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-image {
+    height: 35px;
+    width: auto;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(14, 165, 233, 0.3));
+}
+
 .nav-logo h3 {
     color: var(--primary-color);
     font-size: 1.2rem;
